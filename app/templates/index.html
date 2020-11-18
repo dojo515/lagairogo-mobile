@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Mobile Price - INPUT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="../static/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../static/css/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+
+            <header>
+                <h1>Mobile Price Prediction </h1>
+
+            </header>
+            <section>
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="{{ url_for('predict')}}"method="POST">
+                                <h1>INPUT DETAILS</h1>
+                                <p>
+                                    <label for="battery_power" class="uname"  > <b>BATTERY POWER (mAh)<b></label>
+                                    <input id="battery_power" name="battery_power" required="required" type="number" value="842" placeholder="Battery Power in mAh"/>
+                                </p>
+                                <p>
+                                    <label for="blue" class="uname"  > <b>BLUETOOTH<b></label>
+                                    <input id="blue" name="blue" required="required" type="number" value="0" placeholder="Bluetooth (0 or 1)"/>
+                                </p>
+								<p>
+                                    <label for="clock_speed" class="uname"  > <b>CLOCK SPEED<b></label>
+                                    <input id="clock_speed" name="clock_speed"  type="number" value="2.2" step="any" placeholder="Clock Speed"/>
+                                </p>
+								<p>
+                                    <label for="dual_sim" class="uname"  > <b>DUAL SIM SUPPORT<b></label>
+                                    <input id="dual_sim" name="dual_sim" required="required" type="number" value="0" placeholder="Dual Sim(0 or 1)"/>
+                                </p>
+								<p>
+                                    <label for="fc" class="uname"  > <b>FRONT CAMERA (mp)<b></label>
+                                    <input id="fc" name="fc" required="required" type="number" value="13" placeholder="Front camera in megapixels"/>
+                                </p>
+								<p>
+                                    <label for="four_g" class="uname"  > <b>4G SUPPORT<b></label>
+                                    <input id="four_g" name="four_g" required="required" type="number" value="0" placeholder="4G Support (0 or 1)"/>
+                                </p>
+								<p>
+                                    <label for="int_memory" class="uname"  > <b>INTERNAL MEMORY<b></label>
+                                    <input id="int_memory" name="int_memory" required="required" type="number" value="7" placeholder="Internal Memory in GB"/>
+                                </p>
+								<p>
+                                    <label for="m_dep" class="uname"  > <b>MOBILE DEPTH<b></label>
+                                    <input id="m_dep" name="m_dep" required="required" type="number" step="any" value="0.6" placeholder="Mobile Depth in cm"/>
+                                </p>
+								<p>
+                                    <label for="mobile_wt" class="uname"  > <b>MOBILE WEIGHT<b></label>
+                                    <input id="mobile_wt" name="mobile_wt" required="required" type="number" value="188" placeholder="Mobile Weight"/>
+                                </p>
+								<p>
+                                    <label for="n_cores" class="uname"  > <b>PROCESSOR CORES<b></label>
+                                    <input id="n_cores" name="n_cores" required="required" type="number" value="2" placeholder="No. of processor cores"/>
+                                </p>
+								<p>
+                                    <label for="pc" class="uname"  > <b>PRIMARY CAMERA (mp)<b></label>
+                                    <input id="pc" name="pc" required="required" type="number" value="2" placeholder="Primary Camera in mp"/>
+                                </p>
+								<p>
+                                    <label for="px_height" class="uname"  > <b>PIXEL RESOLUTION (HEIGHT)<b></label>
+                                    <input id="px_height" name="px_height" required="required" type="number" value="20" placeholder="Pixel Resolution Height"/>
+                                </p>
+								<p>
+                                    <label for="px_width" class="uname"  > <b>PIXEL RESOLUTION (WIDTH)<b></label>
+                                    <input id="px_width" name="px_width" required="required" type="number" value="756" placeholder="Pixel Resolution width"/>
+                                </p>
+								<p>
+                                    <label for="ram" class="uname"  > <b>RAM (MB)<b></label>
+                                    <input id="ram" name="ram" required="required" type="number" value="2549" placeholder="RAM in MB"/>
+                                </p>
+								<p>
+                                    <label for="sc_h" class="uname"  > <b>SCREEN HEIGHT (CM)<b></label>
+                                    <input id="sc_h" name="sc_h" required="required" type="number" value="9" placeholder="Screen Height in CM"/>
+                                </p>
+								<p>
+                                    <label for="sc_w" class="uname"  > <b>SCREEN WIDTH (CM)<b></label>
+                                    <input id="sc_w" name="sc_w" required="required" type="number" value="7" placeholder="Screen width in CM"/>
+                                </p>
+								<p>
+                                    <label for="talk_time" class="uname"  > <b>TALK TIME<b></label>
+                                    <input id="talk_time" name="talk_time" required="required" type="number" value="19" placeholder="Talk Time"/>
+                                </p>
+								<p>
+                                    <label for="three_g" class="uname"  > <b>3G SUPPORT<b></label>
+                                    <input id="three_g" name="three_g" required="required" type="number" value="0" placeholder="3G Support (0 or 1)"/>
+                                </p>
+								<p>
+                                    <label for="touch_screen" class="uname"  > <b>TOUCH SCREEN<b></label>
+                                    <input id="touch_screen" name="touch_screen" required="required" type="number" value="0" placeholder="Touch Screen Support (0 or 1)"/>
+                                </p>
+								<p>
+                                    <label for="wifi" class="uname"  > <b>WIFI SUPPORT<b></label>
+                                    <input id="wifi" name="wifi" required="required" type="number" value="0" placeholder="WIFI Support (0 or 1)"/>
+                                </p>
+
+
+                                <p class="login button">
+                                    <input type="submit" value="Submit" />
+								</p>
+
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
