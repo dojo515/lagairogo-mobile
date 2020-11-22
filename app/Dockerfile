@@ -3,5 +3,5 @@ WORKDIR /lagairogo-mobile/app/
 COPY . .
 RUN pip3 install -r requirements.txt
 EXPOSE 5001
-ENTRYPOINT ["PYTHON"]
+ENTRYPOINT ["python3"]
 CMD ["app.py"]
